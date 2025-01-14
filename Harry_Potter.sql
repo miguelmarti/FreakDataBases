@@ -21,7 +21,7 @@ insert into house values (2, "Hufflepuff");
 insert into house values (3, "Ravenclaw");
 insert into house values (4, "Slytherin");
 
-CREATE TABLE person (
+CREATE TABLE users (
     id INTEGER PRIMARY KEY,
     first_name varchar(50) not null,
     last_name varchar(50) not null,
@@ -31,131 +31,131 @@ CREATE TABLE person (
     FOREIGN KEY (house_id) REFERENCES house(id)
 );
 
-INSERT INTO person VALUES(1, "Euan", "Abercrombie", "euan_abercrombie@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(2, "Katie", "Bell", "katie_bell@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(3, "Lavender", "Brown", "lavender_brown@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(4, "Ritchie", "Coote", "ritchie_coote@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(5, "Colin", "Creevey", "colin_creevey@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(6, "Dennis", "Creevey", "dennis_creevey@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(7, "Seamus", "Finnigan", "seamus_finnigan@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(8, "Hermione", "Granger", "hermione_granger@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(9, "Angelina", "Johnson", "angelina_johnson@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(10, "Lee", "Jordan", "lee_jordan@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(11, "Andrew", "Kirke", "andrew_kirke@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(12, "Neville", "Longbottom", "neville_longbottom@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(13, "Natalie", "McDonald", "natalie_mcdonald@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(14, "Mary", "Macdonald", "mary_macdonald@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(15, "Cormac", "McLaggen", "cormac_mclaggen@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(16, "Parvati", "Patil", "parvati_patil@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(17, "Jimmy", "Peakes", "jimmy_peakes@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(18, "Sally-Anne", "Perks", "sally-anne_perks@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(19, "Harry", "Potter", "harry_potter@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(20, "Demelza", "Robins", "demelza_robins@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(21, "Jack", "Sloper", "jack_sloper@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(22, "Alicia", "Spinnet", "alicia_spinnet@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(23, "Dean", "Thomas", "dean_thomas@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(24, "Romilda", "Vane", "romilda_vane@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(25, "Fred", "Weasley", "fred_weasley@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(26, "George", "Weasley", "george_weasley@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(27, "Ginny", "Weasley", "ginny_weasley@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(28, "Ron", "Weasley", "ron_weasley@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(29, "Oliver", "Wood", "oliver_wood@hogwarts.com", "student", 1);
-INSERT INTO person VALUES(30, "Hannah", "Abbott", "hannah_abbott@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(31, "Susan", "Bones", "susan_bones@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(32, "Eleanor", "Branstone", "eleanor_branstone@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(33, "Owen", "Cauldwell", "owen_cauldwell@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(34, "Cedric", "Diggory", "cedric_diggory@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(35, "Justin", "Finch-Fletchley", "justin_finch-fletchley@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(36, "Ernie", "Macmillan", "ernie_macmillan@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(37, "Laura", "Madley", "laura_madley@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(38, "Eloise", "Midgeon", "eloise_midgeon@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(39, "Zacharias", "Smith", "zacharias_smith@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(40, "Kevin", "Whitby", "kevin_whitby@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(41, "Rose", "Zeller", "rose_zeller@hogwarts.com", "student", 2);
-INSERT INTO person VALUES(42, "Stewart", "Ackerley", "stewart_ackerley@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(43, "Marcus", "Belby", "marcus_belby@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(44, "Terry", "Boot", "terry_boot@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(45, "Mandy", "Brocklehurst", "mandy_brocklehurst@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(46, "Cho", "Chang", "cho_chang@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(47, "Eddie", "Carmichael", "eddie_carmichael@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(48, "Penelope", "Clearwater", "penelope_clearwater@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(49, "Michael", "Corner", "michael_corner@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(50, "Roger", "Davies", "roger_davies@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(51, "Marietta", "Edgecombe", "marietta_edgecombe@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(52, "S", "Fawcett", "s_fawcett@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(53, "Anthony", "Goldstein", "anthony_goldstein@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(54, "Luna", "Lovegood", "luna_lovegood@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(55, "Padma", "Patil", "padma_patil@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(56, "Orla", "Quirke", "orla_quirke@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(57, "Lisa", "Turpin", "lisa_turpin@hogwarts.com", "student", 3);
-INSERT INTO person VALUES(58, "Malcolm", "Baddock", "malcolm_baddock@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(59, "Miles", "Bletchley", "miles_bletchley@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(60, "Millicent", "Bullstrode", "millicent_bullstrode@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(61, "Vincent", "Crabbe", "vincent_crabbe@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(62, "Marcus", "Flint", "marcus_flint@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(63, "Gregory", "Goyle", "gregory_goyle@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(64, "Terence", "Higgs", "terence_higgs@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(65, "Draco", "Malfoy", "draco_malfoy@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(66, "Theodore", "Nott", "theodore_nott@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(67, "Pansy", "Parkinson", "pansy_parkinson@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(68, "Graham", "Pritchard", "graham_pritchard@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(69, "Adrian", "Pucey", "adrian_pucey@hogwarts.com", "student", 4);
-INSERT INTO person VALUES(70, "Blaise", "Zabini", "blaise_zabini@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(1, "Euan", "Abercrombie", "euan_abercrombie@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(2, "Katie", "Bell", "katie_bell@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(3, "Lavender", "Brown", "lavender_brown@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(4, "Ritchie", "Coote", "ritchie_coote@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(5, "Colin", "Creevey", "colin_creevey@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(6, "Dennis", "Creevey", "dennis_creevey@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(7, "Seamus", "Finnigan", "seamus_finnigan@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(8, "Hermione", "Granger", "hermione_granger@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(9, "Angelina", "Johnson", "angelina_johnson@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(10, "Lee", "Jordan", "lee_jordan@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(11, "Andrew", "Kirke", "andrew_kirke@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(12, "Neville", "Longbottom", "neville_longbottom@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(13, "Natalie", "McDonald", "natalie_mcdonald@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(14, "Mary", "Macdonald", "mary_macdonald@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(15, "Cormac", "McLaggen", "cormac_mclaggen@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(16, "Parvati", "Patil", "parvati_patil@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(17, "Jimmy", "Peakes", "jimmy_peakes@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(18, "Sally-Anne", "Perks", "sally-anne_perks@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(19, "Harry", "Potter", "harry_potter@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(20, "Demelza", "Robins", "demelza_robins@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(21, "Jack", "Sloper", "jack_sloper@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(22, "Alicia", "Spinnet", "alicia_spinnet@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(23, "Dean", "Thomas", "dean_thomas@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(24, "Romilda", "Vane", "romilda_vane@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(25, "Fred", "Weasley", "fred_weasley@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(26, "George", "Weasley", "george_weasley@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(27, "Ginny", "Weasley", "ginny_weasley@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(28, "Ron", "Weasley", "ron_weasley@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(29, "Oliver", "Wood", "oliver_wood@hogwarts.com", "student", 1);
+INSERT INTO users VALUES(30, "Hannah", "Abbott", "hannah_abbott@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(31, "Susan", "Bones", "susan_bones@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(32, "Eleanor", "Branstone", "eleanor_branstone@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(33, "Owen", "Cauldwell", "owen_cauldwell@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(34, "Cedric", "Diggory", "cedric_diggory@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(35, "Justin", "Finch-Fletchley", "justin_finch-fletchley@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(36, "Ernie", "Macmillan", "ernie_macmillan@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(37, "Laura", "Madley", "laura_madley@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(38, "Eloise", "Midgeon", "eloise_midgeon@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(39, "Zacharias", "Smith", "zacharias_smith@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(40, "Kevin", "Whitby", "kevin_whitby@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(41, "Rose", "Zeller", "rose_zeller@hogwarts.com", "student", 2);
+INSERT INTO users VALUES(42, "Stewart", "Ackerley", "stewart_ackerley@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(43, "Marcus", "Belby", "marcus_belby@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(44, "Terry", "Boot", "terry_boot@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(45, "Mandy", "Brocklehurst", "mandy_brocklehurst@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(46, "Cho", "Chang", "cho_chang@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(47, "Eddie", "Carmichael", "eddie_carmichael@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(48, "Penelope", "Clearwater", "penelope_clearwater@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(49, "Michael", "Corner", "michael_corner@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(50, "Roger", "Davies", "roger_davies@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(51, "Marietta", "Edgecombe", "marietta_edgecombe@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(52, "S", "Fawcett", "s_fawcett@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(53, "Anthony", "Goldstein", "anthony_goldstein@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(54, "Luna", "Lovegood", "luna_lovegood@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(55, "Padma", "Patil", "padma_patil@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(56, "Orla", "Quirke", "orla_quirke@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(57, "Lisa", "Turpin", "lisa_turpin@hogwarts.com", "student", 3);
+INSERT INTO users VALUES(58, "Malcolm", "Baddock", "malcolm_baddock@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(59, "Miles", "Bletchley", "miles_bletchley@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(60, "Millicent", "Bullstrode", "millicent_bullstrode@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(61, "Vincent", "Crabbe", "vincent_crabbe@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(62, "Marcus", "Flint", "marcus_flint@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(63, "Gregory", "Goyle", "gregory_goyle@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(64, "Terence", "Higgs", "terence_higgs@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(65, "Draco", "Malfoy", "draco_malfoy@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(66, "Theodore", "Nott", "theodore_nott@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(67, "Pansy", "Parkinson", "pansy_parkinson@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(68, "Graham", "Pritchard", "graham_pritchard@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(69, "Adrian", "Pucey", "adrian_pucey@hogwarts.com", "student", 4);
+INSERT INTO users VALUES(70, "Blaise", "Zabini", "blaise_zabini@hogwarts.com", "student", 4);
 
-INSERT INTO person VALUES(71, "Sirius", "Black", "sirius_black@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(72, "James", "Potter", "james_potter@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(73, "Lily", "Potter", "lily_potter@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(74, "Arthur", "Weasley", "arthur_weasley@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(75, "Bill", "Weasley", "bill_weasley@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(76, "Charlie", "Weasley", "charlie_weasley@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(77, "Molly", "Weasley", "molly_weasley@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(78, "Percy", "Weasley", "percy_weasley@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(79, "Justin", "Finch-Fletchley", "justin_finch-fletchley@hogwarts.com", "PAS", 2);
-INSERT INTO person VALUES(80, "Nymphadora", "Tonks", "nymphadora_tonks@hogwarts.com", "PAS", 2);
-INSERT INTO person VALUES(81, "Filius", "Flitwick", "filius_flitwick@hogwarts.com", "PAS", 3);
-INSERT INTO person VALUES(82, "Regulus", "Black", "regulus_black@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(83, "Bellatrix", "Lestrange", "bellatrix_lestrange@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(84, "Rabastan", "Lestrange", "rabastan_lestrange@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(85, "Rodolphus", "Lestrange", "rodolphus_lestrange@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(86, "Abraxas", "Malfoy", "abraxas_malfoy@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(87, "Lucius", "Malfoy", "lucius_malfoy@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(88, "Narcissa", "Malfoy", "narcissa_malfoy@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(89, "Tom", "Riddle", "tom_riddle@hogwarts.com", "PAS", 4);
-INSERT INTO person VALUES(90, "Peter", "Pettigrew", "peter_pettigrew@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(71, "Sirius", "Black", "sirius_black@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(72, "James", "Potter", "james_potter@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(73, "Lily", "Potter", "lily_potter@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(74, "Arthur", "Weasley", "arthur_weasley@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(75, "Bill", "Weasley", "bill_weasley@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(76, "Charlie", "Weasley", "charlie_weasley@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(77, "Molly", "Weasley", "molly_weasley@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(78, "Percy", "Weasley", "percy_weasley@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(79, "Justin", "Finch-Fletchley", "justin_finch-fletchley@hogwarts.com", "PAS", 2);
+INSERT INTO users VALUES(80, "Nymphadora", "Tonks", "nymphadora_tonks@hogwarts.com", "PAS", 2);
+INSERT INTO users VALUES(81, "Filius", "Flitwick", "filius_flitwick@hogwarts.com", "PAS", 3);
+INSERT INTO users VALUES(82, "Regulus", "Black", "regulus_black@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(83, "Bellatrix", "Lestrange", "bellatrix_lestrange@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(84, "Rabastan", "Lestrange", "rabastan_lestrange@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(85, "Rodolphus", "Lestrange", "rodolphus_lestrange@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(86, "Abraxas", "Malfoy", "abraxas_malfoy@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(87, "Lucius", "Malfoy", "lucius_malfoy@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(88, "Narcissa", "Malfoy", "narcissa_malfoy@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(89, "Tom", "Riddle", "tom_riddle@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(90, "Peter", "Pettigrew", "peter_pettigrew@hogwarts.com", "PAS", 1);
 
-INSERT INTO person VALUES(91, "Godric", "Gryffindor", "godric_gryffindor@hogwarts.com", "PAS", 1);
-INSERT INTO person VALUES(92, "Helga", "Hufflepuff", "helga_hufflepuff@hogwarts.com", "PAS", 2);
-INSERT INTO person VALUES(94, "Rowena", "Ravenclaw", "rowena_ravenclaw@hogwarts.com", "PAS", 3);
-INSERT INTO person VALUES(93, "Salazar", "Slytherin", "salazar_slytherin@hogwarts.com", "PAS", 4);
+INSERT INTO users VALUES(91, "Godric", "Gryffindor", "godric_gryffindor@hogwarts.com", "PAS", 1);
+INSERT INTO users VALUES(92, "Helga", "Hufflepuff", "helga_hufflepuff@hogwarts.com", "PAS", 2);
+INSERT INTO users VALUES(94, "Rowena", "Ravenclaw", "rowena_ravenclaw@hogwarts.com", "PAS", 3);
+INSERT INTO users VALUES(93, "Salazar", "Slytherin", "salazar_slytherin@hogwarts.com", "PAS", 4);
 
-INSERT INTO person VALUES(95, "Albus", "Dumbledore", "albus_dumbledore@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(96, "Rubeus", "Hagrid", "rubeus_hagrid@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(97, "Minerva", "McGonagall", "minerva_mcgonagall@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(98, "Pomona", "Sprout", "pomona_sprout@hogwarts.com", "teacher", 2);
-INSERT INTO person VALUES(99, "Severus", "Snape", "severus_snape@hogwarts.com", "teacher", 4);
-INSERT INTO person VALUES(100, "Cuthbert", "Binns", "cuthbert_binns@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(101, "Aurora", "Sinistra", "aurora_sinistra@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(102, "Rolanda", "Hooch", "rolanda_hooch@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(103, "Charity", "Burbage", "charity_burbage@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(104, "Sybill", "Trelawney", "sybill_trelawney@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(105, "Septima", "Vector", "septima_vector@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(106, "Bathsheda", "Babbling", "bathsheda_babbling@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(107, "Horace", "Slughorn", "horace_slughorn@hogwarts.com", "teacher", 4);
-INSERT INTO person VALUES(108, "Alastor", "Moody", "alastor_moody@hogwarts.com", "teacher", 1);
-INSERT INTO person VALUES(109, "Remus", "Lupin", "remus_lupin@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(95, "Albus", "Dumbledore", "albus_dumbledore@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(96, "Rubeus", "Hagrid", "rubeus_hagrid@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(97, "Minerva", "McGonagall", "minerva_mcgonagall@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(98, "Pomona", "Sprout", "pomona_sprout@hogwarts.com", "teacher", 2);
+INSERT INTO users VALUES(99, "Severus", "Snape", "severus_snape@hogwarts.com", "teacher", 4);
+INSERT INTO users VALUES(100, "Cuthbert", "Binns", "cuthbert_binns@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(101, "Aurora", "Sinistra", "aurora_sinistra@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(102, "Rolanda", "Hooch", "rolanda_hooch@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(103, "Charity", "Burbage", "charity_burbage@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(104, "Sybill", "Trelawney", "sybill_trelawney@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(105, "Septima", "Vector", "septima_vector@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(106, "Bathsheda", "Babbling", "bathsheda_babbling@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(107, "Horace", "Slughorn", "horace_slughorn@hogwarts.com", "teacher", 4);
+INSERT INTO users VALUES(108, "Alastor", "Moody", "alastor_moody@hogwarts.com", "teacher", 1);
+INSERT INTO users VALUES(109, "Remus", "Lupin", "remus_lupin@hogwarts.com", "teacher", 1);
 
 
 
 ALTER TABLE house ADD head_teacher INTEGER NOT NULL;
-UPDATE house SET head_teacher = (SELECT id FROM person WHERE first_name='Minerva' AND last_name='McGonagall')
+UPDATE house SET head_teacher = (SELECT id FROM users WHERE first_name='Minerva' AND last_name='McGonagall')
 WHERE id = 1;
-UPDATE house SET head_teacher = (SELECT id FROM person WHERE first_name='Pomona' AND last_name='Sprout')
+UPDATE house SET head_teacher = (SELECT id FROM users WHERE first_name='Pomona' AND last_name='Sprout')
 WHERE id = 2;
-UPDATE house SET head_teacher = (SELECT id FROM person WHERE first_name='Filius' AND last_name='Flitwick')
+UPDATE house SET head_teacher = (SELECT id FROM users WHERE first_name='Filius' AND last_name='Flitwick')
 WHERE id = 3;
-UPDATE house SET head_teacher = (SELECT id FROM person WHERE first_name='Severus' AND last_name='Snape')
+UPDATE house SET head_teacher = (SELECT id FROM users WHERE first_name='Severus' AND last_name='Snape')
 WHERE id = 4;
-ALTER TABLE house ADD FOREIGN KEY (head_teacher) REFERENCES person(id);
+ALTER TABLE house ADD FOREIGN KEY (head_teacher) REFERENCES users(id);
 ALTER TABLE house ADD UNIQUE(head_teacher);
 
 
@@ -164,47 +164,47 @@ CREATE TABLE course (
     id INTEGER PRIMARY KEY,
     name varchar(50),
     teacher_id INTEGER UNIQUE,
-    FOREIGN KEY (teacher_id) REFERENCES person(id)
+    FOREIGN KEY (teacher_id) REFERENCES users(id)
 );
 
 INSERT INTO course (id, name, teacher_id) values
   (1,'Potions',
-    (SELECT id FROM person WHERE first_name='Severus' AND last_name='Snape')),
+    (SELECT id FROM users WHERE first_name='Severus' AND last_name='Snape')),
   (2,'Transfiguration',
-    (SELECT id FROM person WHERE first_name='Minerva' AND last_name='McGonagall')),
+    (SELECT id FROM users WHERE first_name='Minerva' AND last_name='McGonagall')),
   (3,'Charms',
-    (SELECT id FROM person WHERE first_name='Filius' AND last_name='Flitwick')),
+    (SELECT id FROM users WHERE first_name='Filius' AND last_name='Flitwick')),
   (4,'Herbology',
-    (SELECT id FROM person WHERE first_name='Pomona' AND last_name='Sprout')),
+    (SELECT id FROM users WHERE first_name='Pomona' AND last_name='Sprout')),
   (5,'Defense Against the Dark Arts',
-    (SELECT id FROM person WHERE first_name='Remus' AND last_name='Lupin')),
+    (SELECT id FROM users WHERE first_name='Remus' AND last_name='Lupin')),
   (6,'Astronomy',
-    (SELECT id FROM person WHERE first_name='Aurora' AND last_name='Sinistra')),
+    (SELECT id FROM users WHERE first_name='Aurora' AND last_name='Sinistra')),
   (7,'Flying',
-    (SELECT id FROM person WHERE first_name='Rolanda' AND last_name='Hooch')),
+    (SELECT id FROM users WHERE first_name='Rolanda' AND last_name='Hooch')),
   (8,'Muggle Studies',
-    (SELECT id FROM person WHERE first_name='Charity' AND last_name='Burbage')),
+    (SELECT id FROM users WHERE first_name='Charity' AND last_name='Burbage')),
   (9,'History of Magic',
-    (SELECT id FROM person WHERE first_name='Cuthbert' AND last_name='Binns')),
+    (SELECT id FROM users WHERE first_name='Cuthbert' AND last_name='Binns')),
   (10,'Headmaster',
-    (SELECT id FROM person WHERE first_name='Albus' AND last_name='Dumbledore')),
+    (SELECT id FROM users WHERE first_name='Albus' AND last_name='Dumbledore')),
   (11,'Care of Magical Creatures',
-    (SELECT id FROM person WHERE first_name='Rubeus' AND last_name='Hagrid')),
+    (SELECT id FROM users WHERE first_name='Rubeus' AND last_name='Hagrid')),
   (12,'Divination',
-  (SELECT id FROM person WHERE first_name='Sybill' AND last_name='Trelawney')),
+  (SELECT id FROM users WHERE first_name='Sybill' AND last_name='Trelawney')),
   (13,'Arithmancy',
-  (SELECT id FROM person WHERE first_name='Septima' AND last_name='Vector')),
+  (SELECT id FROM users WHERE first_name='Septima' AND last_name='Vector')),
    (14,'Ancient Runes',
-  (SELECT id FROM person WHERE first_name='Bathsheda' AND last_name='Babbling'));
+  (SELECT id FROM users WHERE first_name='Bathsheda' AND last_name='Babbling'));
   
   
 
 
 CREATE TABLE enrollment (
-    person_enrollment INTEGER,
+    users_enrollment INTEGER,
     course_enrollment INTEGER,
-    PRIMARY KEY (person_enrollment,course_enrollment),
-    FOREIGN KEY (person_enrollment) REFERENCES person(id),
+    PRIMARY KEY (users_enrollment,course_enrollment),
+    FOREIGN KEY (users_enrollment) REFERENCES users(id),
     FOREIGN KEY (course_enrollment) REFERENCES course(id)
 );
 
@@ -288,29 +288,29 @@ CREATE TABLE house_points (
     receiver INTEGER, 
     points INTEGER,
     PRIMARY KEY (id),
-    FOREIGN KEY (giver) REFERENCES person(id), 
-    FOREIGN KEY (receiver) REFERENCES person(id)
+    FOREIGN KEY (giver) REFERENCES users(id), 
+    FOREIGN KEY (receiver) REFERENCES users(id)
 );
 INSERT INTO house_points (giver,receiver,points)VALUES
 
-((SELECT id FROM person WHERE first_name='Severus' AND last_name='Snape'),
- (SELECT id FROM person WHERE first_name='Harry' AND last_name='Potter'),-50),
- ((SELECT id FROM person WHERE first_name='Severus' AND last_name='Snape'),
- (SELECT id FROM person WHERE first_name='Ron' AND last_name='Weasley'),-50),
-  ((SELECT id FROM person WHERE first_name='Severus' AND last_name='Snape'),
- (SELECT id FROM person WHERE first_name='Hermione' AND last_name='Granger'),-50),
- ((SELECT id FROM person WHERE first_name='Minerva' AND last_name='McGonagall'),
- (SELECT id FROM person WHERE first_name='Harry' AND last_name='Potter'),50),
- ((SELECT id FROM person WHERE first_name='Albus' AND last_name='Dumbledore'),
- (SELECT id FROM person WHERE first_name='Harry' AND last_name='Potter'),100),
- ((SELECT id FROM person WHERE first_name='Pomona' AND last_name='Sprout'),
- (SELECT id FROM person WHERE first_name='Hermione' AND last_name='Granger'),20);
+((SELECT id FROM users WHERE first_name='Severus' AND last_name='Snape'),
+ (SELECT id FROM users WHERE first_name='Harry' AND last_name='Potter'),-50),
+ ((SELECT id FROM users WHERE first_name='Severus' AND last_name='Snape'),
+ (SELECT id FROM users WHERE first_name='Ron' AND last_name='Weasley'),-50),
+  ((SELECT id FROM users WHERE first_name='Severus' AND last_name='Snape'),
+ (SELECT id FROM users WHERE first_name='Hermione' AND last_name='Granger'),-50),
+ ((SELECT id FROM users WHERE first_name='Minerva' AND last_name='McGonagall'),
+ (SELECT id FROM users WHERE first_name='Harry' AND last_name='Potter'),50),
+ ((SELECT id FROM users WHERE first_name='Albus' AND last_name='Dumbledore'),
+ (SELECT id FROM users WHERE first_name='Harry' AND last_name='Potter'),100),
+ ((SELECT id FROM users WHERE first_name='Pomona' AND last_name='Sprout'),
+ (SELECT id FROM users WHERE first_name='Hermione' AND last_name='Granger'),20);
 
 
 
 
 SELECT * FROM house;
-SELECT * FROM person;
+SELECT * FROM users;
 SELECT * FROM course;
 SELECT * FROM enrollment;
 SELECT * FROM house_points;
