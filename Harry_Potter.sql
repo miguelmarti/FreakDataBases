@@ -4,6 +4,9 @@
 ##Source: https://github.com/thedevelopnik/hogwarts-sql/tree/master/sql
 #Author David Sudia
 
+##Modifications: https://github.com/miguelmarti/FreakDataBases/blob/main/Harry_Potter.sql
+##Modifications from: Miguel Martí
+
 DROP DATABASE IF EXISTS hogwarts;
 CREATE DATABASE hogwarts;
 
@@ -136,6 +139,7 @@ INSERT INTO person VALUES(105, "Septima", "Vector", 1);
 INSERT INTO person VALUES(106, "Bathsheda", "Babbling", 1);
 INSERT INTO person VALUES(107, "Horace", "Slughorn", 4);
 INSERT INTO person VALUES(108, "Alastor", "Moody", 1);
+INSERT INTO person VALUES(109, "Remus", "Lupin", 1);
 
 
 ALTER TABLE house ADD head_teacher INTEGER NOT NULL;
