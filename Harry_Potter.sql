@@ -14,15 +14,16 @@ USE hogwarts;
 
 CREATE TABLE house(
   id INTEGER PRIMARY KEY,
-  name varchar(50) not null
+  name varchar(50) not null,
+    wing  varchar(20) not null
 );
-insert into house values (1, "Gryffindor");
-insert into house values (2, "Hufflepuff");
-insert into house values (3, "Ravenclaw");
-insert into house values (4, "Slytherin");
+insert into house values (1, "Gryffindor","north-east");
+insert into house values (2, "Hufflepuff","north-west");
+insert into house values (3, "Ravenclaw","south-east");
+insert into house values (4, "Slytherin","south-west");
 
 CREATE TABLE person (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT not null,
     first_name varchar(50) not null,
     last_name varchar(50) not null,
     email varchar(50) not null,
@@ -125,8 +126,8 @@ INSERT INTO person VALUES(90, "Peter", "Pettigrew", "peter_pettigrew@hogwarts.co
 
 INSERT INTO person VALUES(91, "Godric", "Gryffindor", "godric_gryffindor@hogwarts.com", "PAS", 1);
 INSERT INTO person VALUES(92, "Helga", "Hufflepuff", "helga_hufflepuff@hogwarts.com", "PAS", 2);
-INSERT INTO person VALUES(94, "Rowena", "Ravenclaw", "rowena_ravenclaw@hogwarts.com", "PAS", 3);
-INSERT INTO person VALUES(93, "Salazar", "Slytherin", "salazar_slytherin@hogwarts.com", "PAS", 4);
+INSERT INTO person VALUES(93, "Rowena", "Ravenclaw", "rowena_ravenclaw@hogwarts.com", "PAS", 3);
+INSERT INTO person VALUES(94, "Salazar", "Slytherin", "salazar_slytherin@hogwarts.com", "PAS", 4);
 
 INSERT INTO person VALUES(95, "Albus", "Dumbledore", "albus_dumbledore@hogwarts.com", "teacher", 1);
 INSERT INTO person VALUES(96, "Rubeus", "Hagrid", "rubeus_hagrid@hogwarts.com", "teacher", 1);
@@ -155,8 +156,21 @@ UPDATE house SET head_teacher = (SELECT id FROM person WHERE first_name='Filius'
 WHERE id = 3;
 UPDATE house SET head_teacher = (SELECT id FROM person WHERE first_name='Severus' AND last_name='Snape')
 WHERE id = 4;
-ALTER TABLE house ADD FOREIGN KEY (head_teacher) REFERENCES person(id);
+ALTER TABLE house ADD FOREIGN KEY (head_teacher) REFERENCES person(id) ON DELETE CASCADE;
 ALTER TABLE house ADD UNIQUE(head_teacher);
+
+ALTER TABLE house ADD founder INTEGER NOT NULL;
+UPDATE house SET founder = (SELECT id FROM person WHERE first_name='Godric' AND last_name='Gryffindor')
+WHERE id = 1;
+UPDATE house SET founder = (SELECT id FROM person WHERE first_name='Helga' AND last_name='Hufflepuff')
+WHERE id = 2;
+UPDATE house SET founder = (SELECT id FROM person WHERE first_name='Rowena' AND last_name='Ravenclaw')
+WHERE id = 3;
+UPDATE house SET founder = (SELECT id FROM person WHERE first_name='Salazar' AND last_name='Slytherin')
+WHERE id = 4;
+ALTER TABLE house ADD FOREIGN KEY (head_teacher) REFERENCES person(id) ON DELETE CASCADE;
+ALTER TABLE house ADD UNIQUE(head_teacher);
+
 
 
 
@@ -164,7 +178,7 @@ CREATE TABLE course (
     id INTEGER PRIMARY KEY,
     name varchar(50),
     teacher_id INTEGER UNIQUE,
-    FOREIGN KEY (teacher_id) REFERENCES person(id)
+    FOREIGN KEY (teacher_id) REFERENCES person(id) ON DELETE CASCADE
 );
 
 INSERT INTO course (id, name, teacher_id) values
@@ -204,8 +218,8 @@ CREATE TABLE enrollment (
     person_enrollment INTEGER,
     course_enrollment INTEGER,
     PRIMARY KEY (person_enrollment,course_enrollment),
-    FOREIGN KEY (person_enrollment) REFERENCES person(id),
-    FOREIGN KEY (course_enrollment) REFERENCES course(id)
+    FOREIGN KEY (person_enrollment) REFERENCES person(id) ON DELETE CASCADE,
+    FOREIGN KEY (course_enrollment) REFERENCES course(id) ON DELETE CASCADE
 );
 
 
@@ -288,8 +302,8 @@ CREATE TABLE house_points (
     receiver INTEGER, 
     points INTEGER,
     PRIMARY KEY (id),
-    FOREIGN KEY (giver) REFERENCES person(id), 
-    FOREIGN KEY (receiver) REFERENCES person(id)
+    FOREIGN KEY (giver) REFERENCES person(id) ON DELETE CASCADE, 
+    FOREIGN KEY (receiver) REFERENCES person(id) ON DELETE CASCADE
 );
 INSERT INTO house_points (giver,receiver,points)VALUES
 
@@ -314,3 +328,9 @@ SELECT * FROM person;
 SELECT * FROM course;
 SELECT * FROM enrollment;
 SELECT * FROM house_points;
+
+/*To Use with Laravel Users table
+
+INSERT INTO users (name, email, password, rol) values
+  ('Albus Dumbledore','albus_dumbledore@hogwarts.com','$2y$12$92UV8wEWEAXdLuGt6SuMWeUvySR.4hVc6CfN/qieth6qmbxm8QD8C','admin')
+*/
